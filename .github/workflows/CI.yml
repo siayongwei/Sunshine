@@ -17,7 +17,7 @@ jobs:
   github_env:
     name: GitHub Env Debug
     runs-on: ubuntu-latest
-
+    
     steps:
       - name: Dump github context
         run: echo "$GITHUB_CONTEXT"
@@ -43,7 +43,7 @@ jobs:
         id: setup_release
         uses: LizardByte/setup-release-action@v2025.102.14715
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.PAT_TOKEN }}
 
   build_win:
     name: Windows
